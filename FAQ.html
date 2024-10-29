@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Link to your CSS file -->
+  <link rel="stylesheet" href="css/stylefaq.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Car Rent</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="types-of-cars.html">Types of Cars</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about-us.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="others.html">Others</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="FAQ.html">FAQ</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- FAQ Header -->
+<h1>Frequently Asked Questions</h1>
+
+<div class="container mt-5">
+  <div class="accordion" id="faqAccordion">
+    <div class="card">
+      <div class="card-header" id="headingOne" onclick="toggleAnswer('collapseOne')">
+        <h2 class="mb-0">
+          <a class="btn btn-link" role="button">
+            Is it possible, if I am UNDER 18?
+          </a>
+        </h2>
+      </div>
+      <div id="collapseOne" class="collapse" data-parent="#faqAccordion">
+        <div class="card-body">
+          No, the driver needs to be older than 18.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingTwo" onclick="toggleAnswer('collapseTwo')">
+        <h2 class="mb-0">
+          <a class="btn btn-link" role="button">
+            What documents do I need?
+          </a>
+        </h2>
+      </div>
+      <div id="collapseTwo" class="collapse" data-parent="#faqAccordion">
+        <div class="card-body">
+          You will need a valid driver's license, ID, and a credit card.
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" id="headingThree" onclick="toggleAnswer('collapseThree')">
+        <h2 class="mb-0">
+          <a class="btn btn-link" role="button">
+            How can I rent a car?
+          </a>
+        </h2>
+      </div>
+      <div id="collapseThree" class="collapse" data-parent="#faqAccordion">
+        <div class="card-body">
+          You can rent a car online or at a rental location.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<form onsubmit="return validateForm()">
+  <div class="form-group">
+    <label for="name">Your Name</label>
+    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+    <small id="nameError" style="color:red;"></small> <!-- Error display element -->
+  </div>
+  <div class="form-group">
+    <label for="email">Your Email</label>
+    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+    <small id="emailError" style="color:red;"></small> <!-- Error display element -->
+  </div>
+  <div class="form-group">
+    <label for="question">Your Question</label>
+    <textarea class="form-control" id="question" rows="4" placeholder="Write your question"></textarea>
+    <small id="questionError" style="color:red;"></small> <!-- Error display element -->
+  </div>
+  <button type="submit" class="btn btn-primary">Submit Question</button>
+</form>
+
+<script src="js/validateForm.js"></script>
+
+<!-- Button to trigger the popup -->
+<button class="open-btn" onclick="openPopup()">Subscribe</button>
+
+<!-- Popup Form -->
+<div class="popup-form" id="popupForm">
+  <h2>Subscribe for notification</h2>
+  <form>
+    <label for="popup-email">Email:</label><br>
+    <input type="email" id="popup-email" name="email" placeholder="Enter your email"><br><br>
+    <button type="submit" class="open-btn">Submit</button>
+  </form>
+  <button class="close-btn" onclick="closePopup()">Close</button>
+</div>
+
+<!-- Background overlay -->
+<div class="overlay" id="overlay" onclick="closePopup()"></div>
+
+<!-- FAQ Toggle Script -->
+<script>
+  function toggleAnswer(collapseId) {
+    const collapseElement = document.getElementById(collapseId);
+    if (collapseElement.classList.contains('show')) {
+      collapseElement.classList.remove('show');
+    } else {
+      collapseElement.classList.add('show');
+    }
+  }
+
+  // Open the popup
+  function openPopup() {
+    document.getElementById('popupForm').style.display = 'block';
+    document.getElementById('overlay').style.display = 'block';
+  }
+
+  // Close the popup
+  function closePopup() {
+    document.getElementById('popupForm').style.display = 'none';
+    document.getElementById('overlay').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>

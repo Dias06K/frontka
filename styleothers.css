@@ -1,0 +1,43 @@
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Card Animations */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Animation on Hover */
+.card img {
+  transition: transform 0.5s ease;
+}
+
+.card:hover img {
+  transform: scale(1.1); /* Zoom in the image when hovering over the card */
+}
+
+/* Button Animations */
+.btn {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  transform: translateY(-3px); /* Move button upwards slightly */
+}
+
+/* Footer (Optional) */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #f8f9fa;
+}

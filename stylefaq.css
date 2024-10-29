@@ -1,0 +1,74 @@
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  margin-top: 50px;
+  font-size: 3rem;
+  color: #333;
+  text-align: center;
+}
+
+.card-header {
+  cursor: pointer; /* Change cursor to pointer for clickability */
+}
+
+.btn-link {
+  color: black; /* Change link color to dark gray */
+  text-decoration: none; /* Remove underline */
+}
+
+.btn-link:hover {
+  text-decoration: underline; /* Optionally add underline on hover */
+}
+
+/* Popup form styling */
+.popup-form {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Background overlay */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 500;
+}
+
+/* Button styling */
+.open-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 20px;
+}
+
+/* Close button */
+.close-btn {
+  background-color: #dc3545;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+}

@@ -120,6 +120,25 @@ footer a:hover {
 .navigation-buttons button {
   margin-right: 10px;
 }
+body.light {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+body.dark {
+  background-color: #333;
+  color: #f5f5f5;
+}
+
+/* Optional: Adjust navbar styling in dark mode */
+.navbar-light.bg-light.dark {
+  background-color: #444; /* Darker background for dark mode */
+  color: #f5f5f5; /* Lighter text color */
+}
+
+.nav-link.dark {
+  color: #f5f5f5; /* Lighter color for navbar links in dark mode */
+}
 
 
 
